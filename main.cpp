@@ -1,7 +1,8 @@
 #include <iostream>
 
 
-// that reads two separate integers from the user, adds them together, and then outputs the answer. 
+// that reads two separate integers from the user, 
+// adds them together, and then outputs the answer. 
 
 void readNumber(int& x, int&y) 
 {
@@ -9,9 +10,9 @@ void readNumber(int& x, int&y)
     std::cin >> x >> y;
 }
 
-void writeAnswer() 
+int writeAnswer(int&x, int&y) 
 {
-
+    return x + y;
 }
 
 
@@ -19,7 +20,7 @@ int main()
 { 
     int x{}, y{};
     readNumber(x, y);
-    std::cout << "You entered: " << x << " and " << y << '\n';
-
+    // std::cout << "You entered: " << x << " and " << y << '\n';
+    std::cout << x << " + " << y << " is " << writeAnswer(x, y) << '\n';
     return 0;
 }
