@@ -18,12 +18,13 @@
                 "-Wconversion",
                 "-Wsign-conversion",
                 "-Werror",
-                "${file}",
+                "${workspaceFolder}/*.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${workspaceFolder}/main",
+                "-I./source/includes"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
