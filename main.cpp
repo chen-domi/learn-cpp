@@ -1,18 +1,25 @@
 #include <iostream>
 
 
-int getUserInput() 
+// that reads two separate integers from the user, adds them together, and then outputs the answer. 
+
+void readNumber(int& x, int&y) 
 {
-    std::cout << "Enter an integer: ";
-    int input{};
-    std::cin >> input;
-    return input;
+    std::cout << "Enter two integers: ";
+    std::cin >> x >> y;
 }
 
-int main() 
+void writeAnswer() 
 {
-    int value{ getUserInput() };
-    std::cout << value << '\n';
+
+}
+
+
+int main()
+{ 
+    int x{}, y{};
+    readNumber(x, y);
+    std::cout << "You entered: " << x << " and " << y << '\n';
 
     return 0;
 }
