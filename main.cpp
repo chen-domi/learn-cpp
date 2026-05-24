@@ -4,23 +4,33 @@
 // that reads two separate integers from the user, 
 // adds them together, and then outputs the answer. 
 
-void readNumber(int& x, int&y) 
+// void readNumber(int& x, int&y) 
+// {
+//     std::cout << "Enter two integers: ";
+//     std::cin >> x >> y;
+// }
+
+
+int readNumber()
 {
-    std::cout << "Enter two integers: ";
-    std::cin >> x >> y;
+    std::cout << "Enter a number to add: ";
+    int x{};
+    std::cin >> x;
+    return x;
 }
 
-int writeAnswer(int&x, int&y) 
+void writeAnswer(int&x, int&y) 
 {
-    return x + y;
+    std::cout << x << " + " << y << " = " << x + y << '\n';
 }
 
 
 int main()
 { 
-    int x{}, y{};
-    readNumber(x, y);
-    // std::cout << "You entered: " << x << " and " << y << '\n';
-    std::cout << x << " + " << y << " is " << writeAnswer(x, y) << '\n';
+    int x{ readNumber() };
+    int y{ readNumber() };
+
+    writeAnswer(x, y);
+
     return 0;
 }
