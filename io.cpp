@@ -1,7 +1,7 @@
 #include "io.h"
 #include <iostream>
 
-int readNumber()
+int readNumber() 
 {
     std::cout << "Enter a number to add: ";
     int x{};
@@ -9,7 +9,6 @@ int readNumber()
     return x;
 }
 
-void writeAnswer(int&x, int&y) 
-{
+void writeAnswer(int&x, int&y) {
     std::cout << x << " + " << y << " = " << x + y << '\n';
 }
