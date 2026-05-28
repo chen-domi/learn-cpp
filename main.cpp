@@ -1,14 +1,17 @@
 #include <iostream>
 
-int main() {
-    int x{ 1 };
-    std::cout << x << ' ';
+int main()
+{
+    std::cout << "Enter an integer: ";
+    int x {};
+    std::cin >> x;
 
-    x = x + 2;
-    std::cout << x << ' ';
-
-    x = x + 3;
-    std::cout << x << ' ';
+    if (x > 0)
+        std::cout << "The value is positive\n";
+    else if (x < 0)
+        std::cout << "The value is negative\n";
+    else
+        std::cout << "The value is zero\n";
 
     return 0;
 }
