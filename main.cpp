@@ -24,10 +24,12 @@ int getUserValue() {
 int main() {
     int x{ getUserValue() };
     
-    if (isPrime(x))
+    if (isPrime(x)) {
         std::cout << x << " is a prime number \n";
-    else 
+    }
+    else {
         std::cout << x << " is not a prime number \n";
+    }
 
     return 0;
 }
