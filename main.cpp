@@ -1,25 +1,33 @@
 #include <iostream>
+#include <vector>
 
-bool isEqual(int x, int y) {
-    return x == y;
+bool isPrime(int x) {
+    std::vector<int> primeNumbers = {2, 3, 5, 7};
+    return std::find(primeNumbers.begin(), primeNumbers.end(), x) != primeNumbers.end();
 }
 
-int getInteger() {
-    std::cout << "Enter an integer: ";
+int getUserValue() {
     int x{};
-    std::cin >> x;
+
+    do {
+        std::cout << "Enter an integer 0-9: ";
+        std::cin >> x;
+
+        if (x < 0 || x > 9) {
+            std::cout << x << " is not a valid input,\n";
+        } 
+    } while (x < 0 || x > 9);
+
     return x;
 }
 
 int main() {
-    int x{ getInteger() };
-    int y{ getInteger() };
+    int x{ getUserValue() };
     
-    std::cout << std::boolalpha;
-    if (isEqual(x, y)) 
-        std::cout << x << " and " << y << " are equal\n";
+    if (isPrime(x))
+        std::cout << x << " is a prime number \n";
     else 
-        std::cout << x << " and " << y << "are not equal\n";
-        
+        std::cout << x << " is not a prime number \n";
+
     return 0;
 }
