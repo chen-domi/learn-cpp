@@ -1,17 +1,25 @@
 #include <iostream>
 
-int main()
-{
+bool isEqual(int x, int y) {
+    return x == y;
+}
+
+int getInteger() {
     std::cout << "Enter an integer: ";
-    int x {};
+    int x{};
     std::cin >> x;
+    return x;
+}
 
-    if (x > 0)
-        std::cout << "The value is positive\n";
-    else if (x < 0)
-        std::cout << "The value is negative\n";
-    else
-        std::cout << "The value is zero\n";
-
+int main() {
+    int x{ getInteger() };
+    int y{ getInteger() };
+    
+    std::cout << std::boolalpha;
+    if (isEqual(x, y)) 
+        std::cout << x << " and " << y << " are equal\n";
+    else 
+        std::cout << x << " and " << y << "are not equal\n";
+        
     return 0;
 }
