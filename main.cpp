@@ -20,15 +20,20 @@ double getDoubleValue()
     return input;
 }
 
-int main()
-{
-    double x{ getDoubleValue() };
-    double y{ getDoubleValue() };
-
+char getOperation() {
     std::cout << "Enter operator (+, -, *, /): ";
     char op{};
     std::cin >> op;
 
+    return op;
+}
+
+int main()
+{
+    double x{ getDoubleValue() };
+    double y{ getDoubleValue() };
+    char op{ getOperation() };
+    
     switch (op)
     {
     case '+':
