@@ -1,38 +1,54 @@
 #include <iostream>
+#include <vector>
 
-char selectOperation() {
-    std::cout << "Enter +, -, *, or /: ";
-    char operation{};
-    std::cin >> operation;
+// 1. Get first floating point value from the user --
+// 2. Get second floating point value from the user --
+// 3. Get mathematical symbol from user --
+// 4. Program computers the answer -- 
+// 5. Program prints the result. -- 
 
-    switch (operation) {
-        case '+':
-            std::cout << "You entered: " << operation << '\n';
-        case '-':
-            std::cout << "You entered: " << operation << '\n';
-        case '*':
-            std::cout << "You entered: " << operation << '\n';
-        case '/':
-            std::cout << "You entered: " << operation << '\n';
-    }
+// If the user enters an invalid symbol, the program should print nothing
 
-    return operation;
-}
+// Attempt all in main function
 
-double getFloatValueFromUser() {
+int main()
+{
     std::cout << "Enter a double value: ";
-    double input{};
-    std::cin >> input;
+    double x{};
+    std::cin >> x;
 
-    return input;
-}
+    std::cout << "Enter a double value: ";
+    double y{};
+    std::cin >> y;
 
-int main() {
-    double x{ getFloatValueFromUser() };
-    double y{ getFloatValueFromUser() };
-    char operation{ selectOperation() };
+    std::cout << "Enter operator (+, -, *, /): ";
+    char op{};
+    std::cin >> op;
 
-    std::cout << x << ' '<< operation << ' ' << y << ' ' << '=' <<'\n';
+    switch (op)
+    {
+    case '+':
+        std::cout << x << ' ' << op << ' ' << y << " is " << x + y << '\n';
+        break;
+    case '-':
+        std::cout << x << ' ' << op << ' ' << y << " is " << x - y << '\n';
+        break;
+
+    case '*':
+        std::cout << x << ' ' << op << ' ' << y << " is " << x * y << '\n';
+        break;
+    case '/':
+        if (y == 0)
+        {
+            std::cout << "Error: Division by 0 \n";
+            break;
+        }
+        else
+        {
+            std::cout << x << ' ' << op << ' ' << y << " is " << x / y << '\n';
+            break;
+        }
+    }
 
     return 0;
 }
