@@ -20,7 +20,8 @@ double getDoubleValue()
     return input;
 }
 
-char getOperation() {
+char getOperation()
+{
     std::cout << "Enter operator (+, -, *, /): ";
     char op{};
     std::cin >> op;
@@ -28,13 +29,9 @@ char getOperation() {
     return op;
 }
 
-int main()
+void calculateResult(double x, double y, char op)
 {
-    double x{ getDoubleValue() };
-    double y{ getDoubleValue() };
-    char op{ getOperation() };
-    
-    switch (op)
+   switch (op)
     {
     case '+':
         std::cout << x << ' ' << op << ' ' << y << " is " << x + y << '\n';
@@ -58,6 +55,12 @@ int main()
             break;
         }
     }
+}
+
+int main()
+{
+    calculateResult(getDoubleValue(), getDoubleValue(), getOperation());
+
 
     return 0;
 }
