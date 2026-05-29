@@ -4,22 +4,26 @@
 // 1. Get first floating point value from the user --
 // 2. Get second floating point value from the user --
 // 3. Get mathematical symbol from user --
-// 4. Program computers the answer -- 
-// 5. Program prints the result. -- 
+// 4. Program computers the answer --
+// 5. Program prints the result. --
 
 // If the user enters an invalid symbol, the program should print nothing
 
 // Attempt all in main function
 
-int main()
+double getDoubleValue()
 {
     std::cout << "Enter a double value: ";
-    double x{};
-    std::cin >> x;
+    double input{};
+    std::cin >> input;
 
-    std::cout << "Enter a double value: ";
-    double y{};
-    std::cin >> y;
+    return input;
+}
+
+int main()
+{
+    double x{ getDoubleValue() };
+    double y{ getDoubleValue() };
 
     std::cout << "Enter operator (+, -, *, /): ";
     char op{};
