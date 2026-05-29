@@ -59,8 +59,10 @@ void calculateResult(double x, double y, char op)
 
 int main()
 {
-    calculateResult(getDoubleValue(), getDoubleValue(), getOperation());
-
+    double x { getDoubleValue() };
+    double y { getDoubleValue() };
+    char op { getOperation() };
+    calculateResult(x, y, op);
 
     return 0;
 }
