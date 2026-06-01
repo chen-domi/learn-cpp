@@ -27,11 +27,11 @@ void printOlder(std::string_view name1, int age1, std::string_view name2, int ag
 
 int main()
 {
-    std::string p1{ getFullName(1) };
-    int age1{ getAge(p1) };
+    const std::string p1{ getFullName(1) };
+    const int age1{ getAge(p1) };
 
-    std::string p2{ getFullName(2) };
-    int age2{ getAge(p2) };
+    const std::string p2{ getFullName(2) };
+    const int age2{ getAge(p2) };
 
     printOlder(p1, age1, p2, age2);
 
