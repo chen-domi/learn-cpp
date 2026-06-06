@@ -1,7 +1,8 @@
 #include <iostream>
+#include <string_view>
 
 // Write the function getQuantityPhrase() here
-std::string getQuantityPhrase(int quantity) 
+std::string_view getQuantityPhrase(int quantity) 
 {
     if (quantity < 0)
         return "negative";
@@ -17,7 +18,7 @@ std::string getQuantityPhrase(int quantity)
 
 }
 // Write the function getApplesPluralized() here
-std::string getApplesPluralized(int quantity)
+std::string_view getApplesPluralized(int quantity)
 {
     return (quantity == 1) ? "apple" : "apples";
 }
