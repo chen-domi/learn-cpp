@@ -8,7 +8,7 @@
 
 constexpr bool isEven(int x)
 {
-    return x % 2 == 0;
+    return !(x % 2);
 }
 
 int main()
@@ -24,6 +24,6 @@ int main()
     {
         std::cout << x << " is an odd number" << '\n';
     }
-    
+
     return 0;
 }
