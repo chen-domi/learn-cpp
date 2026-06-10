@@ -13,7 +13,9 @@ int main()
     std::uint8_t myArticleFlags{ option_favorited };
 
     myArticleFlags |= option_viewed; // set the article as viewed
-    if (myArticleFlags & option_deleted) // check if the article was deleted
+    // if (myArticleFlags & option_deleted) // check if the article was deleted
+    myArticleFlags &= static_cast<std::uint8_t>(~option_favorited); // clear the article as a favorite
+    
 
     std::cout << std::bitset<8>{ myArticleFlags } << '\n';
 
