@@ -18,9 +18,9 @@
                 "-Wconversion",
                 "-Wsign-conversion",
                 "-Werror",
-                "${workspaceFolder}/*.cpp",
+                "${file}",
                 "-o",
-                "${workspaceFolder}/main",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "-I./source/includes"
             ],
             "options": {
