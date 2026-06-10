@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/dominicchen/learn-cpp/chapter-o/decimal-to-binary/decimal-to-binary'
+relocations:     []
+...
