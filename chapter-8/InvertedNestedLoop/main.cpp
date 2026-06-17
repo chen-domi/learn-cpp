@@ -6,12 +6,9 @@ int main()
     while (outer >= 1)
     {
         int inner{ outer };
-        while (inner <= outer)
+        while (inner >= 1)
         {
-            std::cout << inner << ' ';
-            --inner;
-            if (inner < 1)
-                break;
+            std::cout << inner-- << ' ';
         }
         
         std::cout << '\n';
