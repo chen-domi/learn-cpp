@@ -35,6 +35,6 @@ int main()
     char c;
     std::cin >> c;
 
-    calculate(x, y, c);
+    std::cout << x << " + " << y << " is " << calculate(x, y, c) << '\n';
     return 0;
 }
