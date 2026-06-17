@@ -1,8 +1,8 @@
 #include <iostream>
 
-int calculate(int x, int y, char c)
+int calculate(int x, int y, char op)
 {
-    switch (c)
+    switch (op)
     {
     case '+':
         return x + y;
@@ -15,6 +15,7 @@ int calculate(int x, int y, char c)
     case '%':
         return x % y;
     default:
+        std::cout << "calculate(): Unhandled case\n";
         return 0;
     }
 
@@ -32,9 +33,11 @@ int main()
     std::cin >> y;
 
     std::cout << "Enter a mathematical operation (+, -. *, /, %): ";
-    char c;
-    std::cin >> c;
+    char op;
+    std::cin >> op;
 
-    std::cout << x << " + " << y << " is " << calculate(x, y, c) << '\n';
+    int result{ calculate(x, y, op) };
+    std::cout << x << ' ' << op << ' ' << y << " is " << result << '\n';
+
     return 0;
 }
