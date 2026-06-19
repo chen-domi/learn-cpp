@@ -4,6 +4,7 @@ namespace Constants
 {
     constexpr double gravity{ 9.8 };
 }
+
 double getTowerHeight()
 {
 	std::cout << "Enter the height of the tower in meters: ";
