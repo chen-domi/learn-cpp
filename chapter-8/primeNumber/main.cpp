@@ -2,19 +2,26 @@
 #undef NDEBUG
 
 #include <cassert> // for assert
+#include <cmath>
 #include <iostream>
 
 bool isPrime(int x)
 {
     if (x <= 1)
         return false;
-    
-    for (int test{ 2 }; test < x; ++test)
+    if (x == 2)
+        return true;
+    if ( x % 2 == 0)
+        return false;
+
+    for (int test{ 3 }; test * test <= x; test += 2)
     {
         if (x % test == 0)
+        {
             return false;
+        }
     }
-    
+
     return true;
 }
 
